@@ -60,8 +60,8 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
-        key: ${{ secrets.SSH_KEY }} #cat ~/.ssh/id_rsa.pub
-        # passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
+        key: ${{ secrets.SSH_KEY }} #cat ~/.ssh/id_rsa.pub :ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCVDlsWIoUD/gXQzNIeFP1aEsgU9gdqiqeg10MdrFdtneBZAmz0g0MoEqfCTfT3WYPwKnObC7buiiabpIB4CF4BLSoWaQrN8UoMrJrMcsaJsXki4FD19x8A8jsUOc6S4qlHRA0+R6Zah+g7M8CFXawPXk90/AUMKHNAJYDaXwVYcRAkMIFX2MpwGmjrCPgwPFd7XX2EitWXkhEyB3FFH7w+MjLpXa3C9Say2zuXxAqf/lPRzKXDbiQ7NOQPGFz3kpqEQuha3dox5hSuDXnqWo8tD2i5zY4gkCywwJzEFCBkUvw1SsMYuvwHB2ufYOSZ2B8Vvscx/uZ0rcgrbJkOzR7GH4p2aueNvxcBORIWXZjC7XUL6JWsw5PwzJ4gTF6sRcfK/KOqCheYjcokF2P0zZrb/4ATFZo28goIvvG7qrSSmh6627Dor4Mucy8zS9GMIhRYOg2XTfpapnTCVcwmu1r5gYdjgNOS7FDPRP/H3wtGiZZx43LFOh+MO+Wl7vvzKjU= zloybaklan@firsttest
+        passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/docker_s_test
